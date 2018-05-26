@@ -1,0 +1,1 @@
+C:\Users\seburchi\source\repos\InternetBanking\InternetBanking\InternetBanking.UWP\InternetBanking.UWP.csproj;x86

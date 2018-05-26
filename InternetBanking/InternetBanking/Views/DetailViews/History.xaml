@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InternetBanking.Views.DetailViews.History">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="emptyList" Text="There is no data to display!" TextColor="Red"></Label>
+            <ListView x:Name="lvHistory" HasUnevenRows="True">
+                <ListView.Header>
+
+                    <Grid HorizontalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text ="Date" FontSize="Default" Grid.Column="0"/>
+                        <Label Text ="Difference Amount" FontSize="Default" Grid.Column="1"/>
+                        <Label Text ="Currency" FontSize="Default" Grid.Column="2" />
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" Text="{Binding Date}"></Label>
+                                    <Label Grid.Column="1" Text="{Binding DifferenceAmount}"></Label>
+                                    <Label Grid.Column="2" Text="{Binding Currency}"></Label>
+                                    
+
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

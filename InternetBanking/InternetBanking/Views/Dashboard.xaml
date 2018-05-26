@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InternetBanking.Views.Dashboard">
+    <ContentPage.Content>
+        <StackLayout  x:Name="MasterLayout">
+
+            <StackLayout x:Name="DashboardStack" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand">
+                <Image x:Name="DashboardImage" Source="DashboardImage.png" Margin="0,20,0,0"/>
+            </StackLayout>
+
+           
+                <StackLayout>
+                    <Label x:Name="lblCash" FontSize="35" Text="$" TextColor="Green" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="lblAmount" FontSize="25" Text="Total balance" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="lblUserAmount" FontSize="25" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,20,0,0">
+                <Image x:Name="SavingsIcons" Source="Savings.png"/>
+                <Label x:Name="entrySavings" Text="Savings account" IsEnabled="false" FontSize="32" TextColor="White" BackgroundColor="Teal" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="0,0,35,0"></Label>
+               
+            </StackLayout>
+            <Label x:Name="lblSavings" FontSize="25" HorizontalTextAlignment="Center"></Label>
+            <Button x:Name="btnSaveState" Text="Save current state" BackgroundColor="Teal" TextColor="White" FontSize="25" Clicked="SaveCurrentState"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
